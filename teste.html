@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mult(a, b){
+            console.log(a*b);
+        }
+        function pegaAeB(string){
+            let substring = string.replace('x','');
+            let array = [];
+            for(let i = 0; i < substring.length; i++){
+                array[i] = substring[i];
+            }
+            mult(array[0], array[1]);
+        }
+        pegaAeB('3x4');
+    </script>
+</body>
+</html>
