@@ -1,38 +1,18 @@
-function pegaValor(){
-    let tabela;
-    let vals = [];
-    tabela = document.getElementsByClassName('valor');
-    for(let i = 0; i < tabela.length; i++){
-        vals.push(tabela[i].innerText);
-    }
+function start() {
 
-    return fazAnalise(vals);
+    let multi= [];
+    resultados = document.getElementsByClassName('result');
 
-}
-
-function refazString(vals){
-    let substring = [];
-    for (let i = 0; i < vals.length; i++) {
-        substring[i] = vals[i].replace('x','');        
-    }
-    return fazAnalise(substring);
-}
-
-function fazAnalise(vals){
-    let resultado = document.getElementsByClassName('result');
-    let parcial = [];
-    let result = [] ;
-    for (let i = 0; i < resultado.length; i++) {
-        parcial.push(resultado[i].innerText);
-    }
-    for(let i = 0; i < parcial.length; i++){
-        if(parcial[i] === "1x10"){
-            parcial[i] = mult(vals[i][0],vals[i][2]);
-        } else{
-            parcial[i] = 'VALOR X 10';
+    for (let i = 0; i < (resultados.length)/10 ; i++) {
+        for (let j = 0; j < 10; j++) {          
+            multi.push(mult(i + 1, j + 1));
         }
-    } 
-    console.log(parcial);
+    }
+
+    for (let i = 0; i < resultados.length; i++) {
+        resultados[i].innerText = multi[i];
+    }
+    
 }
 
 function mult(a,b){
