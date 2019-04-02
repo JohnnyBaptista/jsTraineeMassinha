@@ -1,6 +1,6 @@
 function start() {
 
-    let multi= [];
+    let multi = [];
     resultados = document.getElementsByClassName('result');
 
     for (let i = 0; i < (resultados.length)/10 ; i++) {
