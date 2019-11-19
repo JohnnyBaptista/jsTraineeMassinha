@@ -5,7 +5,7 @@ function start() {
 
     for (let i = 0; i < (resultados.length)/10 ; i++) {
         for (let j = 0; j < 10; j++) {          
-            multi.push(mult(i + 1, j + 1));
+            multi.push();
         }
     }
 
@@ -13,8 +13,4 @@ function start() {
         resultados[i].innerText = multi[i];
     }
     
-}
-
-function mult(a,b){
-    return a*b;
 }
